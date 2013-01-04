@@ -1,0 +1,4 @@
+TO D0:
+1) Es raro tener que guardar handler como class instance variable de Proc
+2) Evaluar el exception handler solo si el tipo de la excepcion levantada coincide con el del handler
+3) Que deberia suceder si una excepcion no tiene handler

@@ -1,0 +1,21 @@
+GEM
+  specs:
+    ansi (1.4.3)
+    builder (3.0.2)
+    hashie (1.2.0)
+    minitest (4.3.3)
+    minitest-reporters (0.14.0)
+      ansi
+      builder
+      minitest (>= 2.12, < 5.0)
+      powerbar
+    powerbar (1.0.11)
+      ansi (~> 1.4.0)
+      hashie (>= 1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  minitest
+  minitest-reporters (>= 0.5.0)
