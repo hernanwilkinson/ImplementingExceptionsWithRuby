@@ -1,4 +1,7 @@
 TO D0:
-1) Es raro tener que guardar handler como class instance variable de Proc
+1) Design Smell: Es raro tener que guardar handler como class instance variable de Proc
 2) Evaluar el exception handler solo si el tipo de la excepcion levantada coincide con el del handler
-3) Que deberia suceder si una excepcion no tiene handler
+3) ¿Qué debería suceder si una excepción no tiene handler?
+
+Done:
+- Cortar la ejecucion cuando se levanta una excepción

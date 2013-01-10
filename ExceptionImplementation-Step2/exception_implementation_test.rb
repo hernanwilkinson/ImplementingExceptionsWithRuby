@@ -5,14 +5,14 @@ MiniTest::Reporters.use!
 class Proc
 
   def self.current_handler(handler)
-    @currentHandler = handler
+    @current_handler = handler
   end
 
   def self.handle(an_exception)
-    @currentHandler.call an_exception
+    @current_handler.call an_exception
   end
 
-  def call_handling(an_exception_call,&handler)
+  def call_handling(an_exception_class,&handler)
     self.class.current_handler handler
     call
   end
@@ -31,7 +31,7 @@ end
 class ExceptionImplementationTest < Test::Unit::TestCase
 
   def test_1
-    result = lambda { 1+1 }.call_handling Exception do |an_exception|
+    result = lambda { 1+1 }.call_handling Exception do |an_exception |
       flunk
     end
 
@@ -39,13 +39,10 @@ class ExceptionImplementationTest < Test::Unit::TestCase
   end
 
   def test_2
-    result = lambda { NewException.throw }.call_handling NewException do |an_exception|
+    result = lambda { NewException.throw }.call_handling NewException do |an_exception |
       2
     end
 
     assert_equal 2,result
   end
-
-
-
 end

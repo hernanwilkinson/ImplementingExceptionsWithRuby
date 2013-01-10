@@ -3,14 +3,16 @@ require 'minitest/reporters'
 MiniTest::Reporters.use!
 
 class Proc
-  def call_handling(an_exception_call,&handler)
+
+  def call_handling(an_exception_class,&handler)
     call
   end
 end
 class ExceptionImplementationTest < Test::Unit::TestCase
 
   def test_1
-    result = lambda { 1+1 }.call_handling Exception do |an_exception|
+
+    result = lambda { 1+1 }.call_handling Exception do |an_exception |
       flunk
     end
 
