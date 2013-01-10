@@ -1,0 +1,16 @@
+TO DO:
+1) Testear default_handler_not_found_strategy
+7) Sacar @last_handler como class inst var
+
+Done:
+- Cortar la ejecucion cuando se levanta una excepción
+- ¿Qué debería suceder si una excepción no tiene handler?
+- Evaluar el exception handler solo si el tipo de la excepcion levantada coincide con el del handler
+- Implementar handler anidados
+- Design Smell: Es raro tener que guardar handler como class instance variable de Proc
+   Idem para return closure
+   Idem para current_exception_to_handle_class
+3) Asegurar que siempre que se envie install_new_handler_for se desinstale
+4) No utilizar nil como fin de la lista de handlers!
+5) Hacer mas lindo metodo handle
+6) Nombrar correctamente los tests

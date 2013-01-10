@@ -1,0 +1,11 @@
+TO DO:
+2) Evaluar el exception handler solo si el tipo de la excepcion levantada coincide con el del handler
+4) Implementar handler anidados
+5) Testear default_handler_not_found_closure
+
+Done:
+- Cortar la ejecucion cuando se levanta una excepción
+- ¿Qué debería suceder si una excepción no tiene handler?
+- Design Smell: Es raro tener que guardar handler como class instance variable de Proc
+   Idem para return closure
+   Idem para current_exception_to_handle_class
